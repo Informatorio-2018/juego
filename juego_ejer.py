@@ -1,6 +1,6 @@
 # Juego de piedra, papel y tijera
 
 class Juego():
-	pass
-
+	def __init__(self,mano):
+		self.mano=mano
 	
