@@ -40,3 +40,20 @@ class Juego():
 			print("Ganaste!")
 
 
+
+###MENU####
+while True:
+	print("Jugando! Piedra, papel o tijera")
+	print("1-Piedra\n2-Papel\n3-Tijera\n4-Salir")
+	opc = int(input("Elige!: "))
+
+	if(opc==1 or opc== 2 or opc== 3):
+		partida = Juego(opc)
+		partida.Mano_Comp()
+		partida.validar_ganador()
+		input()
+	elif(opc==4):
+		break
+	else:
+		print("Opción incorrecta")
+		input()
