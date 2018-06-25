@@ -38,23 +38,6 @@ class Juego():
 
 		elif(self.mano==3 and self.manocpu==2):
 			print("Ganaste!")
-
-op=0
-while op<=3:
-	print(' Hola vamos a jugar PIEDRA PAPEL O TIJERAS')
-	print(' 1- PIEDRA \n 2-PAPEL \n 3-TIJERA\n')
-	op=int(input('opcion'))
-	juego1= Juego(op)
-	juego1.Mano_Comp()
-	juego1.validar_ganador()
-	input()
-	break
-
-
-
-
-
-
 ###MENU####
 while True:
 	print("Jugando! Piedra, papel o tijera")
