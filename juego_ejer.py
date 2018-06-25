@@ -41,11 +41,13 @@ class Juego():
 
 op=0
 while op<=3:
-	print('Hola vamos a jugar PIEDRA PAPEL O TIJERAS')
-	print('1- PIEDRA \n 2-PAPEL \n3-TIJERA\n')
+	print(' Hola vamos a jugar PIEDRA PAPEL O TIJERAS')
+	print(' 1- PIEDRA \n 2-PAPEL \n 3-TIJERA\n')
 	op=int(input('opcion'))
-	juego1= juego(op)
+	juego1= Juego(op)
+	juego1.Mano_Comp()
 	juego1.validar_ganador()
+	input()
 	break
 
 
