@@ -38,7 +38,7 @@ class Juego():
 			print("\nPerdiste!\n")
 
 		elif(self.mano==3 and self.manocpu==2):
-			print("\nGanaste!\n")
+      print("\nGanaste!\n")
 
 op=0
 
