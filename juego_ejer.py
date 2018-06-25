@@ -3,6 +3,7 @@
 # 1=piedra
 # 2=pàpel
 # 3=tijera
+from os import system
 
 class Juego():
 	manocpu=0
@@ -19,55 +20,50 @@ class Juego():
 	def validar_ganador(self):
 
 		if (self.mano==self.manocpu):
-			print("Empate!")
+			print("\nEmpate!\n")
 
 		elif(self.mano==1 and self.manocpu==2):
-			print("Perdiste!")
+			print("\nPerdiste!\n")
 
 		elif(self.mano==1 and self.manocpu==3):
-			print("Ganaste!")
+			print("\nGanaste!\n")
 		
 		elif(self.mano==2 and self.manocpu==3):
-			print("Perdiste!")
+			print("\nPerdiste!\n")
 
 		elif(self.mano==2 and self.manocpu==1):
-			print("Ganaste!")
+			print("\nGanaste!\n")
 
 		elif(self.mano==3 and self.manocpu==1):
-			print("Perdiste!")
+			print("\nPerdiste!\n")
 
 		elif(self.mano==3 and self.manocpu==2):
-			print("Ganaste!")
+			print("\nGanaste!\n")
 
 op=0
-while op<=3:
-	print(' Hola vamos a jugar PIEDRA PAPEL O TIJERAS')
-	print(' 1- PIEDRA \n 2-PAPEL \n 3-TIJERA\n')
-	op=int(input('opcion'))
-	juego1= Juego(op)
-	juego1.Mano_Comp()
-	juego1.validar_ganador()
-	input()
-	break
-
-
-
-
 
 
 ###MENU####
-while True:
-	print("Jugando! Piedra, papel o tijera")
-	print("1-Piedra\n2-Papel\n3-Tijera\n4-Salir")
-	opc = int(input("Elige!: "))
+def menu():
+	while True:
+		system('cls')
+		print("Jugando! Piedra, papel o tijera")
+		print("1-Piedra\n2-Papel\n3-Tijera\n4-Salir")
 
-	if(opc==1 or opc== 2 or opc== 3):
-		partida = Juego(opc)
-		partida.Mano_Comp()
-		partida.validar_ganador()
-		input()
-	elif(opc==4):
-		break
-	else:
-		print("Opción incorrecta")
-		input()
+		while True:
+			try:
+				opc = int(input("\nElige!: "))
+				break
+			except:
+				print('Error, opción incorrecta!\n')
+				continue
+
+		if(opc==1 or opc== 2 or opc== 3):
+			partida = Juego(opc)
+			partida.Mano_Comp()
+			partida.validar_ganador()
+			input()
+		elif(opc==4):
+			break
+
+menu()
